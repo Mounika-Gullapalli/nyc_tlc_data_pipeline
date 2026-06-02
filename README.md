@@ -308,14 +308,6 @@ os.environ['SF_ACCOUNT']  = 'your_account.snowflakecomputing.com'
 
 ---
 
-## 👤 Author
-
-**Your Name**
-- LinkedIn: linkedin.com/in/yourprofile
-- GitHub: github.com/yourusername
-
----
-
 ## 📄 License
 
 MIT License - feel free to use this project as a reference!
