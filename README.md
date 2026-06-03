@@ -283,21 +283,6 @@ os.environ['SF_ACCOUNT']  = 'your_account.snowflakecomputing.com'
 
 ---
 
-## 💡 Comparison: AWS vs Azure Implementation
-
-| Component | AWS (Original) | Azure (Rebuilt) |
-|-----------|---------------|-----------------|
-| Storage | S3 | ADLS Gen2 |
-| Ingestion | AWS Glue | Azure Data Factory |
-| Processing | AWS Glue (Spark) | Databricks |
-| Orchestration | Step Functions | ADF + Databricks Workflows |
-| Scheduling | EventBridge | Tumbling Window Trigger |
-| Incremental | Glue Job Bookmarks | Auto Loader + Checkpointing |
-| Governance | Glue Catalog | Unity Catalog |
-| Warehouse | N/A | Snowflake |
-
----
-
 ## 📚 Lessons Learned
 
 1. **ADF dataset parameters** cannot access pipeline parameters directly — must pass through dataset-level parameters
