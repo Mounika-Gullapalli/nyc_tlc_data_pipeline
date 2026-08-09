@@ -1,0 +1,30 @@
+resources:
+  jobs:
+    nyc_tlc_pipeline:
+      name: nyc_tlc_pipeline
+      tasks:
+        - task_key: 01_bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/rajasekhargullapalli01@gmail.com/NYC_TLC_Databricks/01_bronze
+            source: WORKSPACE
+        - task_key: 02_silver
+          depends_on:
+            - task_key: 01_bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/rajasekhargullapalli01@gmail.com/NYC_TLC_Databricks/02_silver
+            source: WORKSPACE
+        - task_key: 03_gold
+          depends_on:
+            - task_key: 02_silver
+          notebook_task:
+            notebook_path: /Workspace/Users/rajasekhargullapalli01@gmail.com/NYC_TLC_Databricks/03_gold
+            source: WORKSPACE
+        - task_key: 04_snowflake
+          depends_on:
+            - task_key: 03_gold
+          notebook_task:
+            notebook_path: /Workspace/Users/rajasekhargullapalli01@gmail.com/NYC_TLC_Databricks/04_snowflake
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
