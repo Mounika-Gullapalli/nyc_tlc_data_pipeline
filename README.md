@@ -175,7 +175,111 @@ NYCTLC_DB.ANALYTICS
 ├── DAILY_ZONE     → 31,220,930 rows
 └── DAILY_SERVICE  →    34,802 rows
 ```
+---
 
+## 📊 Business Insights
+
+Analysis of 560M records revealed key patterns:
+
+### 1. 🚗 Driver Earnings Optimization
+**Best earning combination:** Thursday in Manhattan → $23.88/trip × 31M trips
+
+| Day | Borough | Earnings/Trip | Total Trips |
+|-----|---------|--------------|-------------|
+| Thursday | Manhattan | $23.88 | 31.2M |
+| Monday | Queens | $23.67 | 16.1M |
+| Sunday | Queens | $23.21 | 17.4M |
+
+> EWR airport trips pay $74/trip but with extremely low volume making it unreliable for steady income.
+
+---
+
+### 2. 📈 Market Growth
+**Stable market:** $580M - $691M monthly revenue
+
+| Month | Trips | Revenue | Growth |
+|-------|-------|---------|--------|
+| Jan 2024 | 19.5M | $580M | - |
+| Mar 2024 | 21.1M | $668M | +10.18% |
+| Jul 2024 | 19.0M | $604M | -4.72% |
+
+> March strongest (+10.18%) due to spring events. July weakest due to summer vacations.
+
+---
+
+### 3. ✈️ Airport Revenue
+**Airport trips = 60% higher fares**
+
+| Trip Type | Trips | Avg Fare | Revenue Share |
+|-----------|-------|----------|---------------|
+| Airport | 45.6M | $75.80 | 20.22% |
+| Non-Airport | 515M | $47.43 | 79.78% |
+
+> Only 8% of trips generate 20% of revenue — making airport routes disproportionately valuable.
+
+---
+
+### 4. 🗺️ Underserved Areas
+
+| Borough | Total Trips | Avg Duration | Revenue |
+|---------|------------|--------------|---------|
+| Manhattan | 210M | 32.8 mins | $8.3B |
+| Brooklyn | 150M | 36.1 mins | $3.9B |
+| Queens | 120M | 38.2 mins | $4.2B |
+| Staten Island | 8M | 40.0 mins | $219M |
+
+> Staten Island most underserved with longest wait times (40 mins). Queens generates more revenue than Brooklyn due to JFK/LaGuardia airport trips.
+
+---
+
+### 5. 🤝 Shared Ride Adoption
+
+| Period | Requests | Match Rate |
+|--------|----------|------------|
+| Jan 2024 | 733,807 | 31.01% |
+| Apr 2026 | 403,289 | 61.21% |
+
+> Match rate doubled from 31% to 61% but total requests declined 50% — algorithm improved but product losing customers.
+
+---
+
+### 6. 📅 Peak Day Analysis
+
+| Day | Trips | Revenue | Avg Fare |
+|-----|-------|---------|----------|
+| Saturday | 93.5M | $2.88B | $64.16 |
+| Friday | 87.4M | $2.83B | $68.29 |
+| Thursday | 81.1M | $2.82B | $70.79 |
+| Monday | 69.1M | $2.26B | $67.76 |
+
+> Saturday highest volume but Thursday highest fare per trip ($70.79).
+
+---
+
+### 7. ♿ WAV Accessibility Service
+
+| Period | WAV Requests | Match Rate |
+|--------|-------------|------------|
+| Jan 2024 | 37,218 | 100% |
+| Apr 2026 | 50,496 | 100% |
+
+> Perfect 100% WAV match rate throughout 28 months. Demand grew 35% requiring fleet expansion.
+
+---
+
+### 💡 Executive Summary
+
+| Insight | Finding | Recommendation |
+|---------|---------|----------------|
+| Best earning spot | Thursday Manhattan $23.88/trip | Deploy more drivers Thursday PM |
+| Market health | Stable $580-691M/month | Seasonal promotions Jul/Aug |
+| Underserved area | Staten Island 40 min avg | Dedicated drivers needed |
+| Revenue opportunity | Airport = 60% premium fare | Airport specialist program |
+| Shared rides | Match doubled but demand fell 50% | Price incentives needed |
+| Peak day | Saturday highest volume | Max deployment weekends |
+| Accessibility | 100% WAV match rate | Expand fleet for 35% growth |
+
+> See [detailed business insights](snowflake/business_insights.sql) for complete SQL analysis.
 ---
 
 ## 🔄 Pipeline Orchestration
